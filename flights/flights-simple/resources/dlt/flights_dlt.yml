@@ -10,7 +10,7 @@ resources:
             path: ../../src/flights_main_dlt.py
       target: ${var.flights_dlt_schema}
       development: false
-      catalog: main
+      catalog: lr_demo
       serverless: true
       # data_sampling: false
   
