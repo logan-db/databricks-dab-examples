@@ -3,7 +3,11 @@ resources:
   jobs:
     pytest_advanced_notebook_job:
       name: pytest_notebook_advanced_job_${bundle.target}
-
+      
+      permissions:
+        - group_name: users
+          level: CAN_MANAGE # or CAN_VIEW, CAN_MANAGE
+          
       tasks:
         - task_key: notebook_task
           job_cluster_key: job_cluster
