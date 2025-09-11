@@ -113,7 +113,7 @@ targets:
       database: flights_${bundle.target}
       flights_dlt_schema: flights_dlt_${bundle.target}
       flights_test_schema: flights_validation_${bundle.target}
-      node_type_id: Standard_DS3_v2
+      node_type_id: r3.4xlarge
 
   staging:
     mode: production
