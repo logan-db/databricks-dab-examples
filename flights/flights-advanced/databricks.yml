@@ -106,6 +106,7 @@ targets:
     # the same user (Service Principal) ever time.
     mode: production
     workspace:
+      host: https://dbc-16eda7bc-5666.cloud.databricks.com/
       root_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
     run_as:
       user_name: ${workspace.current_user.userName}
