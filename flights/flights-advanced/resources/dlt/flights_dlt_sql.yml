@@ -10,7 +10,7 @@ resources:
             path: ../../src/flights_main_dlt_sql.sql
       target: ${var.flights_dlt_schema}_sql
       development: false
-      catalog: main
+      catalog: lr_demo
       serverless: true
       # data_sampling: false
   

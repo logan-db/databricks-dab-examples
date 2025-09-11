@@ -7,10 +7,9 @@ reference_data = pd.read_csv("_adhoc/data/T_CARRIER_DECODE.csv", header=0)
 print(reference_data.head())
 
 # Create a SparkSession
-spark = DatabricksSession.builder \
-    .getOrCreate()
+spark = DatabricksSession.builder.getOrCreate()
 
-table = "main.flights_dev.flights_raw"
+table = "lr_demo.flights_dev.flights_raw"
 
 df = spark.read.table(table)
 
