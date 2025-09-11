@@ -3,6 +3,10 @@ resources:
   jobs:
     flights_notebook_classic:
       name: flights_advanced_notebook_job_classic_${bundle.target}
+      
+      permissions:
+        - group_name: users
+          level: CAN_MANAGE # or CAN_VIEW, CAN_MANAGE
 
       tasks:
         - task_key: notebook_task

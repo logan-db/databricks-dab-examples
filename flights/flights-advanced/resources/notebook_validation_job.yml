@@ -2,7 +2,11 @@ resources:
   jobs:
     notebook_validation_job:
       name: flights_advanced_validation_job_${bundle.target}
-
+      
+      permissions:
+        - group_name: users
+          level: CAN_MANAGE # or CAN_VIEW, CAN_MANAGE
+          
       tasks:
         - task_key: setup_task
           notebook_task:

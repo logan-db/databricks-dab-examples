@@ -3,7 +3,11 @@ resources:
   jobs:
     flights_advanced_python_classic:
       name: flights_advanced_python_job_classic_${bundle.target}
-
+      
+      permissions:
+        - group_name: users
+          level: CAN_MANAGE # or CAN_VIEW, CAN_MANAGE
+          
       tasks:
         - task_key: python_script
           job_cluster_key: job_cluster

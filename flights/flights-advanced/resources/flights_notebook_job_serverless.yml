@@ -3,6 +3,11 @@ resources:
   jobs:
     flights_notebook:
       name: flights_advanced_notebook_job_${bundle.target}
+      
+      permissions:
+        - group_name: users
+          level: CAN_MANAGE # or CAN_VIEW, CAN_MANAGE
+          
       max_concurrent_runs: 1
       
       parameters:
