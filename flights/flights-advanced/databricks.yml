@@ -106,9 +106,10 @@ targets:
     # the same user (Service Principal) ever time.
     mode: production
     workspace:
+      host: https://dbc-16eda7bc-5666.cloud.databricks.com/
       root_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
     run_as:
-      user_name: ${workspace.current_user.userName}
+      user_name: 090cc78d-5c1c-4cd2-bdc4-6936eb24f5df
     variables:
       database: flights_${bundle.target}
       flights_dlt_schema: flights_dlt_${bundle.target}
